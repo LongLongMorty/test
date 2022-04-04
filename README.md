@@ -1,5 +1,8 @@
 # test
-It is my first repository.
-**I am a JURUO.**
+***It is my first repository.***
 ---
-~~I will be a SHENBEN one day!~~
+---
+>我是东北大学软件工程专业的一名学生，在网上看到了一些关于github的信息
+>以及在大佬@ZFN的帮助下，注册了这个账号
+>我会在这个仓库中上传我的一些学习代码（JAVA）
+---
