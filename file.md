@@ -86,50 +86,48 @@ FileInputStream fileInputStream = null;
 在此之前，我们先要了解一下String 的下面这个构造方法（下面为API中的解释）  
 
 
-    > String(byte[] bytes)
- 
-    > 通过使用平台的默认字符集解码指定的字节数组来构造新的 String
-
-    > 通俗的来说就是，将byte[]转化为String类型
+> String(byte[] bytes)
+> 通过使用平台的默认字符集解码指定的字节数组来构造新的 String
+> 通俗的来说就是，将byte[]转化为String类型
 
  
 ```java
 FileInputStream fileInputStream = null;  
 
-        byte[] bytes = new byte[4];//数组大小就是一次要读入的数量  
+byte[] bytes = new byte[4];//数组大小就是一次要读入的数量  
 
-        try {  
-          
-            int a;  
-          
-            fileInputStream = new FileInputStream("src//LLL");  
-          
-        //返回值：文件剩余有4个就是返回4；不足4个就返回剩余量；一个也没有就返回-1  
-          
-            while ((a = fileInputStream.read(bytes)) != -1) {   
-              
-                System.out.printf(new String(bytes));  
-              
-            }
-        } catch (IOException e) {  
-          
-            e.printStackTrace();  
-          
-        }finally {  
-          
-            try {  
-              
-                if(fileInputStream != null)  
-                  
-                    fileInputStream.close();  
-              
-            }catch (IOException a){  
-              
-                a.printStackTrace();  
-              
-            }  
-          
-        }  
+try {  
+
+    int a;  
+
+    fileInputStream = new FileInputStream("src//LLL");  
+
+//返回值：文件剩余有4个就是返回4；不足4个就返回剩余量；一个也没有就返回-1  
+
+    while ((a = fileInputStream.read(bytes)) != -1) {   
+
+        System.out.printf(new String(bytes));  
+
+    }
+} catch (IOException e) {  
+
+    e.printStackTrace();  
+
+}finally {  
+
+    try {  
+
+        if(fileInputStream != null)  
+
+            fileInputStream.close();  
+
+    }catch (IOException a){  
+
+        a.printStackTrace();  
+
+    }  
+
+}  
 ```  
 
 **这种方法还是会有一个问题，这和读入时字符在byte[ ]中的储存方式有关**
@@ -208,4 +206,3 @@ public class Main {
 
 ```
  ~第一次写这么长的文章，有点费时间啊。~
-​
